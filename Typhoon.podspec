@@ -18,6 +18,9 @@ Pod::Spec.new do |spec|
   spec.osx.exclude_files = 'Source/ios', non_arc_files
   spec.tvos.exclude_files = 'Source/osx', non_arc_files
 
+  spec.watchos.exclude_files = 'Source/osx', 'Source/ios/Storyboard', non_arc_files
+
+  
   spec.requires_arc = true
   spec.subspec 'no-arc' do |sna|
     sna.requires_arc = false
